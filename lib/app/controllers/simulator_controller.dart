@@ -51,18 +51,23 @@ class SimulatorController {
 
   double percent = 1.0;
   double receita;
+  List<double> variacaoReceitaPercent = [3.0,];
 
   calcPercent(){
     double m1 = (results[1] / results[0]);
     double m2 = (results[2] / m1) / 100;
-
     percent = m2;
     receita = (data[1]["receita"]-data[0]["receita"]);
     receita = data[2]["receita"] - receita;
+
     if (receita == 0){
+      variacaoReceitaPercent.add(3.0);
       receita = 1;
+    }else{
+      variacaoReceitaPercent.add(receita > 0 ? variacaoReceitaPercent[0] + 1 : variacaoReceitaPercent[0] - 1);
     }
     receita = ((data[1]["receita"]-data[0]["receita"]) / receita)/100;
+    variacaoReceitaPercent.add(receita > 0 ? variacaoReceitaPercent[0] + 1 : variacaoReceitaPercent[0] - 1);
   }
 
   List<double> valuesLucro = [];

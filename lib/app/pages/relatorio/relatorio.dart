@@ -92,19 +92,6 @@ class _RelatorioState extends State<Relatorio>  with TickerProviderStateMixin {
               color: Colors.black,
               fontSize: 25,
             ),),
-    RichText(text: TextSpan(
-                text: "Vermelho: ",
-                style: TextStyle(
-                color: Colors.redAccent,
-                fontSize: 20,
-                ),
-                children: [
-                TextSpan(
-                text: "Lucro esperado",
-                style: TextStyle(
-                color: Colors.black,
-                )
-                ),])),
             RichText(text: TextSpan(
                 text: "Verde: ",
                 style: TextStyle(
@@ -113,11 +100,25 @@ class _RelatorioState extends State<Relatorio>  with TickerProviderStateMixin {
                 ),
                 children: [
                   TextSpan(
-                      text: "Lucro conseguido",
+                      text: "Lucro",
                       style: TextStyle(
                         color: Colors.black,
                       )
                   ),])),
+    RichText(text: TextSpan(
+                text: "Vermelho: ",
+                style: TextStyle(
+                color: Colors.redAccent,
+                fontSize: 20,
+                ),
+                children: [
+                TextSpan(
+                text: "Receita",
+                style: TextStyle(
+                color: Colors.black,
+                )
+                ),])),
+
 
             Divider(
               height: 10,

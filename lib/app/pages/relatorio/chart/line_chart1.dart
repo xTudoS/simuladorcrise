@@ -314,9 +314,9 @@ class LineChartSample1State extends State<LineChartSample1> {
       ),
       LineChartBarData(
         spots: [
-          FlSpot(1, _controller.valuesLucroEsperado[0]),
-          FlSpot(5, _controller.valuesLucroEsperado[1]),
-          FlSpot(13, _controller.valuesLucroEsperado[2]),
+          FlSpot(1, _controller.variacaoReceitaPercent[0]),
+          FlSpot(5, _controller.variacaoReceitaPercent[1]),
+          FlSpot(13, _controller.variacaoReceitaPercent[2]),
         ],
         isCurved: true,
         colors: const [
